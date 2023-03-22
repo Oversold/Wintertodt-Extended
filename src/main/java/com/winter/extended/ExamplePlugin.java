@@ -1,4 +1,4 @@
-package com.example;
+package com.winter.extended;
 
 import com.google.inject.Provides;
 import javax.inject.Inject;
@@ -22,7 +22,7 @@ public class ExamplePlugin extends Plugin
 	private Client client;
 
 	@Inject
-	private ExampleConfig config;
+	private WintertodtExtendedConfig config;
 
 	@Override
 	protected void startUp() throws Exception
@@ -46,8 +46,8 @@ public class ExamplePlugin extends Plugin
 	}
 
 	@Provides
-	ExampleConfig provideConfig(ConfigManager configManager)
+    WintertodtExtendedConfig provideConfig(ConfigManager configManager)
 	{
-		return configManager.getConfig(ExampleConfig.class);
+		return configManager.getConfig(WintertodtExtendedConfig.class);
 	}
 }
